@@ -1,0 +1,352 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #2b0039 0%, #3d1a4d 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Navbar on scroll - more compact */
+.navbar.scrolled {
+  padding: 0.6rem 8%;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+}
+
+.navbar.scrolled .logo_container img {
+  height: 70px;
+}
+
+/* Logo Container */
+.logo_container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  z-index: 1001;
+}
+
+.logo_container:hover {
+  transform: scale(1.05);
+}
+
+.logo_container img {
+  height: 85px;
+  width: auto;
+  object-fit: contain;
+  transition: height 0.3s ease;
+}
+
+/* Navigation Links */
+.nav_links {
+  display: flex;
+  align-items: center;
+}
+
+.nav_links ul {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_links ul li {
+  position: relative;
+}
+
+.nav_links ul li a {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+/* Hover underline effect */
+.nav_links ul li a:not(.contact_btn)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #b794f6, #7e57c2);
+  transition: width 0.3s ease;
+}
+
+.nav_links ul li a:not(.contact_btn):hover::after {
+  width: 100%;
+}
+
+.nav_links ul li a:not(.contact_btn):hover {
+  color: #b794f6;
+}
+
+/* Active link styling */
+.active_link:not(.contact_btn) {
+  color: #b794f6 !important;
+}
+
+.active_link:not(.contact_btn)::after {
+  width: 100% !important;
+}
+
+/* Contact Button */
+.contact_btn {
+  /* background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%); */
+  background: white;
+  padding: 0.75rem 1.75rem !important;
+  border-radius: 50px;
+  color: #2b0039 !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.contact_btn::after {
+  display: none !important;
+}
+
+.contact_btn:hover {
+  background: #7e57c2;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(183, 148, 246, 0.4);
+}
+
+/* WhatsApp Icon (Desktop) */
+.contact_us {
+  display: flex;
+  align-items: center;
+}
+
+.contact_us a {
+  color: #25d366;
+  font-size: 2.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact_us a:hover {
+  transform: scale(1.15) rotate(10deg);
+  color: #1ebd58;
+}
+
+/* Mobile Menu Footer */
+.nav_footer {
+  display: none;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 1001;
+  transition: transform 0.3s ease;
+  padding: 0;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+/* Overlay for mobile menu */
+.overlay {
+  display: none;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* Tablet and Mobile */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 0.8rem 5%;
+  }
+
+  .navbar.scrolled {
+    padding: 0.6rem 5%;
+  }
+
+  .logo_container img {
+    height: 70px;
+  }
+
+  .navbar.scrolled .logo_container img {
+    height: 60px;
+  }
+
+  /* Mobile Navigation */
+  .nav_links {
+    position: fixed;
+    top: 9.2vh;
+    right: -100%;
+    width: 75%;
+    max-width: 400px;
+    height: 100vh;
+    background: linear-gradient(135deg, #2b0039 0%, #3d1a4d 100%);
+    flex-direction: column;
+    padding: 6rem 2rem 2rem;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .nav_links.active {
+    right: 0;
+  }
+
+  .nav_links ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .nav_links ul li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav_links ul li a {
+    width: 100%;
+    display: block;
+    padding: 1.25rem 0;
+    font-size: 1.125rem;
+  }
+
+  .nav_links ul li a:not(.contact_btn)::after {
+    display: none;
+  }
+
+  .contact_btn {
+    margin-top: 1rem !important;
+    text-align: center;
+    padding: 1rem 1.75rem !important;
+    width: 100%;
+  }
+
+  /* Mobile Menu Footer */
+  .nav_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 30vh;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+  }
+
+  .social_links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .social_links a {
+    color: #fff;
+    font-size: 1.75rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social_links a:hover {
+    color: #b794f6;
+    transform: translateY(-3px);
+  }
+
+  .nav_footer p {
+
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Hide desktop WhatsApp */
+  .contact_us {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* Overlay */
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 998;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.7rem 4%;
+  }
+
+  .logo_container img {
+    height: 60px;
+  }
+
+  .navbar.scrolled .logo_container img {
+    height: 50px;
+  }
+
+  .nav_links {
+    width: 85%;
+    padding: 5rem 1.5rem 2rem;
+  }
+
+  .nav_links ul li a {
+    font-size: 1rem;
+    padding: 1rem 0;
+  }
+
+  .hamburger {
+    font-size: 2.25rem;
+  }
+
+  .social_links a {
+    font-size: 1.5rem;
+  }
+}
