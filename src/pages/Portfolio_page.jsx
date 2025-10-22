@@ -211,11 +211,11 @@ const Portfolio_page = () => {
             </div>
 
             {/* Projects Count */}
-            <div className={styles.results_info}>
+            {/* <div className={styles.results_info}>
               <p>
                 Showing <strong>{filteredProjects.length}</strong> {filteredProjects.length === 1 ? 'project' : 'projects'}
               </p>
-            </div>
+            </div> */}
 
             {/* Projects Grid */}
             {filteredProjects.length > 0 ? (
@@ -300,3 +300,4 @@ const Portfolio_page = () => {
 };
 
 export default Portfolio_page;
+
