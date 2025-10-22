@@ -5,6 +5,8 @@ import styles from '../styles/Portfolio.module.css';
 
 // Import placeholder images (replace with your actual project images)
 import defaultProject from '../assets/default.png';
+import lazeno from '../assets/portfolio/Artboard_1.jpg';
+import sv_logo from '../assets/portfolio/sv_logo.jpg';
 
 const Portfolio_page = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -17,10 +19,10 @@ const Portfolio_page = () => {
       title: 'E-Commerce Website',
       company: 'Lazeno Consultancy Service',
       category: 'Web Development',
-      image: defaultProject, // Replace with actual image
+      image: lazeno, // Replace with actual image
       description: 'Modern e-commerce platform with seamless shopping experience',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      websiteLink: 'https://example-fashion.com', // Live website link
+      websiteLink: 'https://lazenoconsultancyservice.com', // Live website link
       developedBy: 'techon'
     },
     {
@@ -103,7 +105,7 @@ const Portfolio_page = () => {
       title: 'Tech Startup Branding',
       company: 'InnovateTech',
       category: 'Logo Design',
-      image: defaultProject,
+      image: sv_logo,
       description: 'Complete brand identity including logo and style guide',
       technologies: ['Illustrator', 'Photoshop', 'Brand Strategy'],
       websiteLink: null,
@@ -230,9 +232,9 @@ const Portfolio_page = () => {
                       <img src={project.image} alt={project.title} loading="lazy" />
                       
                       {/* Category Badge */}
-                      <div className={styles.category_badge}>
+                      {/* <div className={styles.category_badge}>
                         {project.category}
-                      </div>
+                      </div> */}
 
                       {/* Hover Overlay */}
                       {(project.websiteLink || project.playStoreLink) && (
