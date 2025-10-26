@@ -129,8 +129,8 @@ const Portfolio_page = () => {
     // Graphic Design Projects
 {
       id: 10,
-      title: 'Social Media Campaign',
-      company: 'Fashion Brand',
+      title: 'Bag Design',
+      company: 'Top Fashion',
       category: 'Graphic Design',
       image: tf,
       description: 'Complete social media graphics and marketing materials',
@@ -138,9 +138,21 @@ const Portfolio_page = () => {
       websiteLink: null,
       developedBy: 'techon'
     },
-    // Cybersecurity Projects
+
     {
       id: 11,
+      title: 'Bag Design',
+      company: 'Top Fashion',
+      category: 'Graphic Design',
+      image: coofe,
+      description: 'Complete social media graphics and marketing materials',
+      technologies: ['Photoshop', 'Illustrator', 'Canva'],
+      websiteLink: null,
+      developedBy: 'techon'
+    },
+    // Cybersecurity Projects
+    {
+      id: 12,
       title: 'Security Audit & Implementation',
       company: 'Financial Corp',
       category: 'Cybersecurity',
@@ -302,6 +314,7 @@ const Portfolio_page = () => {
 };
 
 export default Portfolio_page;
+
 
 
 
