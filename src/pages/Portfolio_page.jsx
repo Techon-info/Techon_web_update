@@ -131,7 +131,7 @@ const Portfolio_page = () => {
       title: 'Social Media Campaign',
       company: 'Fashion Brand',
       category: 'Graphic Design',
-      image: tk,
+      image: defaultProject,
       description: 'Complete social media graphics and marketing materials',
       technologies: ['Photoshop', 'Illustrator', 'Canva'],
       websiteLink: null,
@@ -144,7 +144,7 @@ const Portfolio_page = () => {
       title: 'Security Audit & Implementation',
       company: 'Financial Corp',
       category: 'Cybersecurity',
-      image: cf,
+      image: defaultProject,
       description: 'Comprehensive security assessment and vulnerability testing',
       technologies: ['Penetration Testing', 'Security Audit', 'Compliance'],
       websiteLink: null,
@@ -302,5 +302,6 @@ const Portfolio_page = () => {
 };
 
 export default Portfolio_page;
+
 
 
