@@ -8,7 +8,8 @@ import defaultProject from '../assets/default.png';
 import lazeno from '../assets/portfolio/Artboard_1.jpg';
 import sv_logo from '../assets/portfolio/sv_logo.jpg';
 import tf from '../assets/portfolio/Artboard_4.jpg';
-import ck from '../assets/portfolio/Artboard_5.jpg';
+import coofe from '../assets/portfolio/Artboard_5.jpg';
+
 
 const Portfolio_page = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -126,18 +127,17 @@ const Portfolio_page = () => {
     },
 
     // Graphic Design Projects
-    {
+{
       id: 10,
       title: 'Social Media Campaign',
       company: 'Fashion Brand',
       category: 'Graphic Design',
-      image: defaultProject,
+      image: tf,
       description: 'Complete social media graphics and marketing materials',
       technologies: ['Photoshop', 'Illustrator', 'Canva'],
       websiteLink: null,
       developedBy: 'techon'
     },
-
     // Cybersecurity Projects
     {
       id: 11,
@@ -302,6 +302,7 @@ const Portfolio_page = () => {
 };
 
 export default Portfolio_page;
+
 
 
 
