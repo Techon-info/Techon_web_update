@@ -7,9 +7,12 @@ import styles from '../styles/Portfolio.module.css';
 import defaultProject from '../assets/default.png';
 import lazeno from '../assets/portfolio/Artboard_1.jpg';
 import sv_logo from '../assets/portfolio/sv_logo.jpg';
-import tf from '../assets/portfolio/Artboard_4.jpg';
-import coofe from '../assets/portfolio/Artboard_5.jpg';
-
+import app_dev from '../assets/portfolio/App_1.jpg';
+import kvg from '../assets/portfolio/Artboard 7.jpg';
+import ef from '../assets/portfolio/Artboard 6.jpg';
+import jp from '../assets/portfolio/Artboard 9.jpg';
+import ck from '../assets/portfolio/Artboard 5.jpg';
+import tf from '../assets/portfolio/Artboard 4.jpg'
 
 const Portfolio_page = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -28,11 +31,27 @@ const Portfolio_page = () => {
       websiteLink: 'https://lazenoconsultancyservice.com', // Live website link
       developedBy: 'techon'
     },
+
+    // App Development Projects
+    {
+      id: 2,
+      title: 'Doctor patient Mnagemnet',
+      company:'MDE',
+      category: 'App Development',
+      image: app_dev,
+      description: 'Mobile fitness app with workout tracking and meal planning',
+      technologies: ['React Native', 'Redux', 'Firebase'],
+      websiteLink: null, // No website for mobile app
+      playStoreLink: 'https://play.google.com/store/apps/details?id=com.fitlife',
+      appStoreLink: 'https://apps.apple.com/app/fitlife/id123456',
+      developedBy: 'techon'
+    },
+
     // Logo Design Projects
     {
-      id: 8,
+      id: 3,
       title: 'Tech Startup Branding',
-      company: 'InnovateTech',
+      company: 'SV Groups',
       category: 'Logo Design',
       image: sv_logo,
       description: 'Complete brand identity including logo and style guide',
@@ -40,12 +59,58 @@ const Portfolio_page = () => {
       websiteLink: null,
       developedBy: 'techon'
     },
+       {
+      id: 4,
+      title: 'Tech Startup Branding',
+      company: 'Jocker Photography',
+      category: 'Logo Design',
+      image: jp,
+      description: 'Complete brand identity including logo and style guide',
+      technologies: ['Illustrator', 'Photoshop', 'Brand Strategy'],
+      websiteLink: null,
+      developedBy: 'techon'
+    },
 
+       {
+      id: 5,
+      title: 'Tech Startup Branding',
+      company: 'Coffe Kasakudhiya',
+      category: 'Logo Design',
+      image: ck,
+      description: 'Complete brand identity including logo and style guide',
+      technologies: ['Illustrator', 'Photoshop', 'Brand Strategy'],
+      websiteLink: null,
+      developedBy: 'techon'
+    },
+
+    {
+      id: 8,
+      title: 'Restaurant Logo & Menu',
+      company: 'Sri Palani Aandavar Real Estate',
+      category: 'Graphic Design',
+      image: kvg,
+      description: 'Logo design with complementary menu and business cards',
+      technologies: ['Illustrator', 'InDesign', 'Typography'],
+      websiteLink: 'https://example-bellacucina.com',
+      developedBy: 'techon'
+    },
 
     // Graphic Design Projects
-{
+    {
+      id: 9,
+      title: 'Social Media Campaign',
+      company: 'Ego Friendly',
+      category: 'Graphic Design',
+      image: ef,
+      description: 'Complete social media graphics and marketing materials',
+      technologies: ['Photoshop', 'Illustrator', 'Canva'],
+      websiteLink: null,
+      developedBy: 'techon'
+    },
+
+     {
       id: 10,
-      title: 'Bag Design',
+      title: 'Bag Desining',
       company: 'Top Fashion',
       category: 'Graphic Design',
       image: tf,
@@ -53,21 +118,9 @@ const Portfolio_page = () => {
       technologies: ['Photoshop', 'Illustrator', 'Canva'],
       websiteLink: null,
       developedBy: 'techon'
-    },
-
-    {
-      id: 11,
-      title: 'Bag Design',
-      company: 'Top Fashion',
-      category: 'Graphic Design',
-      image: coofe,
-      description: 'Complete social media graphics and marketing materials',
-      technologies: ['Photoshop', 'Illustrator', 'Canva'],
-      websiteLink: null,
-      developedBy: 'techon'
-    },
-  
+    }
   ];
+  
 
   // Filter categories
   const categories = [
@@ -130,11 +183,11 @@ const Portfolio_page = () => {
             </div>
 
             {/* Projects Count */}
-            {/* <div className={styles.results_info}>
+            <div className={styles.results_info}>
               <p>
                 Showing <strong>{filteredProjects.length}</strong> {filteredProjects.length === 1 ? 'project' : 'projects'}
               </p>
-            </div> */}
+            </div>
 
             {/* Projects Grid */}
             {filteredProjects.length > 0 ? (
@@ -219,9 +272,3 @@ const Portfolio_page = () => {
 };
 
 export default Portfolio_page;
-
-
-
-
-
-
