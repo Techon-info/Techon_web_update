@@ -28,80 +28,6 @@ const Portfolio_page = () => {
       websiteLink: 'https://lazenoconsultancyservice.com', // Live website link
       developedBy: 'techon'
     },
-    {
-      id: 2,
-      title: 'Restaurant Booking System',
-      company: 'Gourmet Bistro',
-      category: 'Web Development',
-      image: defaultProject,
-      description: 'Interactive restaurant website with real-time table booking',
-      technologies: ['React', 'Firebase', 'Material-UI'],
-      websiteLink: 'https://example-restaurant.com',
-      developedBy: 'techon'
-    },
-    {
-      id: 3,
-      title: 'Corporate Website',
-      company: 'Tech Innovations Ltd',
-      category: 'Web Development',
-      image: defaultProject,
-      description: 'Professional corporate website with CMS integration',
-      technologies: ['Next.js', 'Tailwind', 'Sanity'],
-      websiteLink: 'https://example-corporate.com',
-      developedBy: 'techon'
-    },
-
-    // App Development Projects
-    {
-      id: 4,
-      title: 'Fitness Tracker App',
-      company: 'FitLife',
-      category: 'App Development',
-      image: defaultProject,
-      description: 'Mobile fitness app with workout tracking and meal planning',
-      technologies: ['React Native', 'Redux', 'Firebase'],
-      websiteLink: null, // No website for mobile app
-      playStoreLink: 'https://play.google.com/store/apps/details?id=com.fitlife',
-      appStoreLink: 'https://apps.apple.com/app/fitlife/id123456',
-      developedBy: 'techon'
-    },
-    {
-      id: 5,
-      title: 'Delivery Service App',
-      company: 'QuickDeliver',
-      category: 'App Development',
-      image: defaultProject,
-      description: 'On-demand delivery app with real-time tracking',
-      technologies: ['Flutter', 'Firebase', 'Google Maps API'],
-      websiteLink: null,
-      playStoreLink: 'https://play.google.com/store/apps/details?id=com.quickdeliver',
-      developedBy: 'techon'
-    },
-
-    // UI/UX Design Projects
-    {
-      id: 6,
-      title: 'Healthcare Dashboard',
-      company: 'MediCare Solutions',
-      category: 'UI/UX Design',
-      image: defaultProject,
-      description: 'Patient management system with intuitive interface',
-      technologies: ['Figma', 'Adobe XD', 'Prototyping'],
-      websiteLink: 'https://example-healthcare.com',
-      developedBy: 'techon'
-    },
-    {
-      id: 7,
-      title: 'Banking App Redesign',
-      company: 'FinBank',
-      category: 'UI/UX Design',
-      image: defaultProject,
-      description: 'Modern banking app UI with enhanced user experience',
-      technologies: ['Figma', 'User Research', 'Wireframing'],
-      websiteLink: null,
-      developedBy: 'techon'
-    },
-
     // Logo Design Projects
     {
       id: 8,
@@ -114,17 +40,7 @@ const Portfolio_page = () => {
       websiteLink: null,
       developedBy: 'techon'
     },
-    {
-      id: 9,
-      title: 'Restaurant Logo & Menu',
-      company: 'Bella Cucina',
-      category: 'Logo Design',
-      image: defaultProject,
-      description: 'Logo design with complementary menu and business cards',
-      technologies: ['Illustrator', 'InDesign', 'Typography'],
-      websiteLink: 'https://example-bellacucina.com',
-      developedBy: 'techon'
-    },
+
 
     // Graphic Design Projects
 {
@@ -150,18 +66,7 @@ const Portfolio_page = () => {
       websiteLink: null,
       developedBy: 'techon'
     },
-    // Cybersecurity Projects
-    {
-      id: 12,
-      title: 'Security Audit & Implementation',
-      company: 'Financial Corp',
-      category: 'Cybersecurity',
-      image: defaultProject,
-      description: 'Comprehensive security assessment and vulnerability testing',
-      technologies: ['Penetration Testing', 'Security Audit', 'Compliance'],
-      websiteLink: null,
-      developedBy: 'techon'
-    }
+  
   ];
 
   // Filter categories
@@ -314,6 +219,7 @@ const Portfolio_page = () => {
 };
 
 export default Portfolio_page;
+
 
 
 
