@@ -259,9 +259,9 @@ const Portfolio_page = () => {
             <p>
               Let's collaborate and create something amazing together
             </p>
-            <a href="/contact" className={styles.cta_btn}>
+            <Link to="/contact" className={styles.cta_btn}>
               Start Your Project
-            </a>
+            </Link>
           </div>
         </section>
       </main>
@@ -272,3 +272,4 @@ const Portfolio_page = () => {
 };
 
 export default Portfolio_page;
+
