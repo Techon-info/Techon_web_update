@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../component/Navbar';
 import Footer from '../component/Footer';
 import styles from '../styles/Portfolio.module.css';
+import { Link } from "react-router-dom";
 
 // Import placeholder images (replace with your actual project images)
 import defaultProject from '../assets/default.png';
@@ -272,4 +273,5 @@ const Portfolio_page = () => {
 };
 
 export default Portfolio_page;
+
 
