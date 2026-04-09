@@ -3,6 +3,7 @@ import Navbar from "../component/Navbar";
 import styles from "../styles/About.module.css";
 import aboutImage from "../assets/about.svg"; // Replace with your image
 import Footer from "../component/Footer";
+import {Link} from "react-route-dom";
 
 const About_page = () => {
   return (
@@ -193,12 +194,14 @@ const About_page = () => {
               solutions that drive real results.
             </p>
             <div className={styles.cta_buttons}>
-              <a href="/contact" className={styles.cta_primary}>
-                Get Started
-              </a>
-              <a href="/portfolio" className={styles.cta_secondary}>
-                View Our Work
-              </a>
+               <Link to="/contact" className={styles.cta_primary}>
+              Get Started
+            </Link>
+
+                   <Link to="/portfolio" className={styles.cta_primary}>
+            View Our Work
+            </Link>
+   
             </div>
           </div>
         </section>
