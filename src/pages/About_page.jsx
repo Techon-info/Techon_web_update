@@ -198,7 +198,7 @@ const About_page = () => {
               Get Started
             </Link>
 
-                   <Link to="/portfolio" className={styles.cta_primary}>
+                   <Link to="/portfolio" className={styles.cta_secondary}>
             View Our Work
             </Link>
    
