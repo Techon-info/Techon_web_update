@@ -3,7 +3,7 @@ import Navbar from "../component/Navbar";
 import styles from "../styles/About.module.css";
 import aboutImage from "../assets/about.svg"; // Replace with your image
 import Footer from "../component/Footer";
-import {Link} from "react-route-dom";
+import { Link } from 'react-router-dom';
 
 const About_page = () => {
   return (
