@@ -102,7 +102,7 @@ const Home_page = () => {
           </div>
 
           <div className={styles.services_cta}>
-            <Link to="/services" className={styles.view_all_btn}>
+            <Link to="/Service" className={styles.view_all_btn}>
               View All Services
             </Link>
           </div>
