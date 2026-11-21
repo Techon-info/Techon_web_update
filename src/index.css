@@ -19,14 +19,42 @@
   box-sizing: border-box;
   font-family: 'poppins' , sans-serif;
   text-decoration: none;
-  
-  scroll-behavior: smooth;  
 }
 
-body{
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden; /* fallback */
+  overflow-x: clip;
+}
+
+img, svg, video {
+  max-width: 100%;
+}
+
+/* Scroll-reveal animation (classes are added by ScrollManager) */
+.rv {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1) var(--rv-delay, 0ms),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1) var(--rv-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.rv.rv-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rv { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
 }
 
 /* Scroll Bar */

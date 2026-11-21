@@ -194,10 +194,12 @@
 .Home_img img {
   width: 80%;
   max-width: 600px;
-  height: 60vh;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  max-height: 70vh;
   display: block;
   border-radius: 20px;
-  object-fit: cover;
+  object-fit: contain;
   box-shadow: 0 20px 60px rgba(29, 13, 42, 0.12);
   transition: transform 0.3s ease;
 }
@@ -601,4 +603,138 @@
   .cta_outline {
     width: 100%;
   }
+}
+
+/* Product Spotlight */
+.product_spotlight {
+  padding: clamp(3rem, 8vw, 6rem) 8%;
+  background: linear-gradient(135deg, #30004d 0%, #5a1a8a 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.product_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product_spotlight .section_heading,
+.product_spotlight .section_description {
+  color: #fff;
+}
+
+.product_spotlight .gradient_text {
+  background: linear-gradient(90deg, #e0c3fc, #fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.product_badge {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.product_steps {
+  list-style: none;
+  width: 100%;
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: 1.25rem;
+  text-align: left;
+}
+
+.product_step {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  padding: 1.5rem;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.product_step:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.product_step_no {
+  display: inline-grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: #fff;
+  color: #30004d;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.product_step h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.product_step p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.product_actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.product_spotlight .secondary {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.product_flow {
+  list-style: none;
+  counter-reset: flow;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.product_flow li {
+  counter-increment: flow;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 0.9rem;
+}
+
+.product_flow li::before {
+  content: counter(flow);
+  display: inline-grid;
+  place-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background: #fff;
+  color: #30004d;
+  font-size: 0.75rem;
+  font-weight: 700;
 }
