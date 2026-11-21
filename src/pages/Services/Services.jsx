@@ -8,6 +8,7 @@ import appDevImg from '../../assets/app.svg';
 import graphicImg from '../../assets/graphic.svg';
 import cyberSecImg from '../../assets/cybersec.svg';
 import logoDesignImg from '../../assets/logo.svg';
+import productDevImg from '../../assets/Business_Plan_amico.svg';
 
 const Services = () => {
   const services = [
@@ -74,6 +75,19 @@ const Services = () => {
         'Penetration Testing',
         'Security Audits',
         'Compliance Management'
+      ]
+    },
+    {
+      id: 6,
+      title: 'Product Development',
+      description: 'We turn your idea into a ready-to-use software product, from planning and design to launch and ongoing improvement, just like we built our own Techon FlowDesk.',
+      image: productDevImg,
+      link: '/products',
+      features: [
+        'Idea to MVP',
+        'Custom Business Software',
+        'Scalable Architecture',
+        'Launch & Ongoing Support'
       ]
     }
   ];

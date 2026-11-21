@@ -153,17 +153,17 @@ const Home = () => {
       <section className={styles.stats_section}>
         <div className={styles.stats_container}>
           <div className={styles.stat_card}>
-            <div className={styles.stat_number}>20+</div>
+            <div className={styles.stat_number}>25+</div>
             <div className={styles.stat_label}>Projects Delivered</div>
           </div>
 
           <div className={styles.stat_card}>
-            <div className={styles.stat_number}>10+</div>
+            <div className={styles.stat_number}>12+</div>
             <div className={styles.stat_label}>Happy Clients</div>
           </div>
 
           <div className={styles.stat_card}>
-            <div className={styles.stat_number}>1+</div>
+            <div className={styles.stat_number}>2+</div>
             <div className={styles.stat_label}>Years Experience</div>
           </div>
 
