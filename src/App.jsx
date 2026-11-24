@@ -5,6 +5,7 @@ import Loader from './components/common/Loader/Loader';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Services from './pages/Services/Services';
+import ServiceDetail from './pages/ServiceDetail/ServiceDetail';
 import Products from './pages/Products/Products';
 import Portfolio from './pages/Portfolio/Portfolio';
 import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
@@ -38,6 +39,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/products" element={<Products />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/:id" element={<ProjectDetail />} />

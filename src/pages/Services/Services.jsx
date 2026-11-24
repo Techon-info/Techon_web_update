@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Services.module.css';
+import { services as serviceData } from '../../data/services';
 
 // Import your service images
 import webDevImg from '../../assets/web.png';
@@ -10,87 +11,24 @@ import cyberSecImg from '../../assets/cybersec.svg';
 import logoDesignImg from '../../assets/logo.svg';
 import productDevImg from '../../assets/Business_Plan_amico.svg';
 
+const serviceImages = {
+  'web-development': webDevImg,
+  'ui-ux-design': graphicImg,
+  'app-development': appDevImg,
+  'logo-design': logoDesignImg,
+  'cybersecurity-consultancy': cyberSecImg,
+  'product-development': productDevImg,
+};
+
 const Services = () => {
-  const services = [
-    {
-      id: 1,
-      title: 'Web Development',
-      description: 'Custom websites and web applications built with the latest technologies to meet your specific business needs.',
-      image: webDevImg,
-      link: '/portfolio?category=web-development',
-      features: [
-        'Responsive Design',
-        'Modern Technologies',
-        'SEO Optimized',
-        'Fast Performance'
-      ]
-    },
-    {
-      id: 2,
-      title: 'UI/UX Design',
-      description: 'Creating intuitive and visually appealing user interfaces that enhance user experience and drive engagement.',
-      image: graphicImg,
-      link: '/portfolio?category=ui-ux-design',
-      features: [
-        'User Research',
-        'Wireframing',
-        'Prototyping',
-        'Usability Testing'
-      ]
-    },
-    {
-      id: 3,
-      title: 'App Development',
-      description: 'Developing user-centric mobile applications for both Android and iOS platforms.',
-      image: appDevImg,
-      link: '/portfolio?category=app-development',
-      features: [
-        'Native Apps',
-        'Cross-platform',
-        'Scalable Solutions',
-        'User-friendly Interface'
-      ]
-    },
-    {
-      id: 4,
-      title: 'Logo Design',
-      description: 'Creating unique and memorable brand identities through professional logo design and branding solutions.',
-      image: logoDesignImg,
-      link: '/portfolio?category=logo-design',
-      features: [
-        'Brand Identity',
-        'Custom Designs',
-        'Unlimited Revisions',
-        'Vector Files'
-      ]
-    },
-    {
-      id: 5,
-      title: 'Cybersecurity Consultancy',
-      description: 'Comprehensive security assessments and strategic guidance to protect your digital infrastructure from cyber threats.',
-      image: cyberSecImg,
-      link: '/portfolio?category=cybersecurity',
-      features: [
-        'Risk Assessment',
-        'Penetration Testing',
-        'Security Audits',
-        'Compliance Management'
-      ]
-    },
-    {
-      id: 6,
-      title: 'Product Development',
-      description: 'We turn your idea into a ready-to-use software product, from planning and design to launch and ongoing improvement, just like we built our own Techon FlowDesk.',
-      image: productDevImg,
-      link: '/products',
-      features: [
-        'Idea to MVP',
-        'Custom Business Software',
-        'Scalable Architecture',
-        'Launch & Ongoing Support'
-      ]
-    }
-  ];
+  // Each card links to the service's own page (/services/<slug>) so it can be found and indexed separately.
+  const services = serviceData.map((service) => ({
+    ...service,
+    id: service.slug,
+    description: service.short,
+    image: serviceImages[service.slug],
+    link: `/services/${service.slug}`,
+  }));
 
   return (
     <>

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import styles from './Portfolio.module.css';
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 // Import placeholder images (replace with your actual project images)
 import defaultProject from '../../assets/default.png';
+import harishAcademy from '../../assets/portfolio/harish_academy.jpg';
 import lazeno from '../../assets/portfolio/Artboard_1.jpg';
 import sv_logo from '../../assets/portfolio/sv_logo.jpg';
 import app_dev from '../../assets/portfolio/App_1.jpg';
@@ -14,11 +15,34 @@ import ck from '../../assets/portfolio/Artboard 5.jpg';
 import tf from '../../assets/portfolio/Artboard 4.jpg'
 
 const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = useState('All');
+  // Service cards link here with ?category=web-development, so honour that on load.
+  const [searchParams] = useSearchParams();
+  const slugToCategory = {
+    'web-development': 'Web Development',
+    'app-development': 'App Development',
+    'ui-ux-design': 'UI/UX Design',
+    'logo-design': 'Logo Design',
+    'graphic-design': 'Graphic Design',
+    cybersecurity: 'Cybersecurity',
+  };
+  const [activeFilter, setActiveFilter] = useState(
+    slugToCategory[searchParams.get('category')] || 'All'
+  );
 
   // Portfolio projects data - Add your real projects here
   const projects = [
     // Web Development Projects
+    {
+      id: 11,
+      title: 'TET Exam Preparation Platform',
+      company: 'Harish Academy',
+      category: 'Web Development',
+      image: harishAcademy,
+      description: 'Online learning platform for Teacher Eligibility Test (TET) aspirants, with subject-wise and full-length mock tests in Tamil and English, plus monthly subscription plans',
+      technologies: ['Mock Tests', 'Tamil & English', 'Subscriptions', 'Student Dashboard'],
+      websiteLink: 'https://harishacademy.in/',
+      developedBy: 'techon'
+    },
     {
       id: 1,
       title: 'E-Commerce Website',
@@ -199,7 +223,7 @@ const Portfolio = () => {
                   >
                     {/* Project Image */}
                     <div className={styles.card_image}>
-                      <img src={project.image} alt={project.title} loading="lazy" />
+                      <img src={project.image} alt={`${project.title} for ${project.company}`} loading="lazy" />
                       
                       {/* Category Badge */}
                       {/* <div className={styles.category_badge}>

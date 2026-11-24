@@ -89,6 +89,7 @@ const Footer = () => {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/services">Services</Link></li>
+              <li><Link to="/products">Products</Link></li>
               <li><Link to="/portfolio">Portfolio</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
@@ -98,10 +99,12 @@ const Footer = () => {
           <div className={styles.footer_section}>
             <h4 className={styles.section_title}>Our Services</h4>
             <ul className={styles.footer_links}>
-              <li><Link to="/services#web-development">Web Development</Link></li>
-              <li><Link to="/services#app-development">App Development</Link></li>
-              <li><Link to="/services#graphic-design">Graphic Design</Link></li>
-              <li><Link to="/services#cybersecurity">Cybersecurity</Link></li>
+              <li><Link to="/services/web-development">Web Development</Link></li>
+              <li><Link to="/services/app-development">App Development</Link></li>
+              <li><Link to="/services/ui-ux-design">UI/UX Design</Link></li>
+              <li><Link to="/services/cybersecurity-consultancy">Cybersecurity</Link></li>
+              <li><Link to="/services/logo-design">Logo Design</Link></li>
+              <li><Link to="/services/product-development">Product Development</Link></li>
             </ul>
           </div>
 
